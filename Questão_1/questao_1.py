@@ -12,26 +12,29 @@ def sumRow(row):
         result+=row[i]
     return result
 
-def floydAlgorithm(graph, IR):
-    n=graph.n
-    D=[None]*(n + 1)
-    R=[None]*(n + 1)
-    for i in range (0, n+1):
-        D[i]=[1000]*(n + 1)
-        R[i]=[0]*(n + 1)
-    for i in range (IR, n+IR):
-        for j in range (IR, n+IR):
-            if graph.M[i][j] != 0:
-                D[i][j]=graph.M[i][j]
-                R[i][j]=j
-            if i==j:
-                D[i][j]=0
-    for k in range(IR, n+IR):
-        for i in range(IR, n+IR):
-            for j in range(IR, n+IR):
-                if D[i][k]+D[k][j]<D[i][j]:
-                    D[i][j]=D[i][k]+D[k][j]
-                    R[i][j]=R[i][k]
+def floydAlgorithm(graph, IR, nodesN):
+    # Criar matrizes D e R com tamanho adequado
+    D = [[float('inf')] * (nodesN + IR + 1) for _ in range(nodesN + IR + 1)]
+    R = [[0] * (nodesN + IR + 1) for _ in range(nodesN + IR + 1)]
+    
+    # Inicialização das matrizes
+    for i in range(IR, IR + nodesN):
+        for j in range(IR, IR + nodesN):
+            if i == j:
+                D[i][j] = 0
+                R[i][j] = i  # ou pode ser 0, dependendo da convenção
+            elif graph.M[i][j] != 0:
+                D[i][j] = graph.M[i][j]
+                R[i][j] = j
+    
+    # Algoritmo de Floyd-Warshall
+    for k in range(IR, IR + nodesN):
+        for i in range(IR, IR + nodesN):
+            for j in range(IR, IR + nodesN):
+                if D[i][k] + D[k][j] < D[i][j]:
+                    D[i][j] = D[i][k] + D[k][j]
+                    R[i][j] = R[i][k]
+    
     return D, R
 
 if __name__== "__main__":
