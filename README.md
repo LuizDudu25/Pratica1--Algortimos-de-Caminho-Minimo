@@ -1,5 +1,48 @@
 # Pratica1--Algortimos-de-Caminho-Minimo
 
+## Como Executar o Código
+### # Prática 1 - Algoritmos de Caminho Mínimo
+
+Implementação de algoritmos para encontrar caminhos mínimos em grafos.
+
+## Como Executar
+
+1. Clone este repositório:
+
+    ```bash
+    git clone https://github.com/LuizDudu25/Pratica1--Algortimos-de-Caminho-Minimo.git
+    cd Pratica1--Algortimos-de-Caminho-Minimo
+    ```
+
+2. Escolha uma das implementações:
+
+    **Questão 1:**
+    ```bash
+    cd "Questão_1"
+    python questao_1.py
+    ```
+
+    **Questão 2:**
+    ```bash
+    cd "Questão_2"
+    
+    ```
+
+    **Questão 3:**
+    ```bash
+    cd "Questão_3"
+    python Q3.py
+    ```
+
+3. Opcional: Use ambiente virtual:
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Linux/Mac
+    venv\Scripts\activate     # Windows
+    ```
+
+
 ## Questão 1
 ## Questão 2
 ## Questão 3
