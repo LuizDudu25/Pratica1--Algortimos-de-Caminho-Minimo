@@ -1,4 +1,11 @@
 # Pratica1--Algortimos-de-Caminho-Minimo
 
+## Questão 1
+## Questão 2
 ## Questão 3
 #### Para este questão, escolhemos o algoritmo de Dijkstra, pois não há custos negativos (todos os pesos das arestas são positivos: 1 para corredores livres e 3 para pisos difíceis), e como o problema requer apenas um único caminho mais curto de S para G, este seria o algoritmo mais eficiente. Não escolhemos Bellman-Ford ou Floyd-Warshall porque eles são muito mais lentos que Dijkstra, com complexidades de O(VE) e O(V³) respectivamente, o que se torna particularmente problemático quando o grid representa um grafo muito grande. Além disso, eles são projetados para problemas diferentes: Bellman-Ford para grafos com pesos negativos, e Floyd-Warshall para calcular caminhos mais curtos entre todos os pares de vértices, nenhum dos quais é necessário para o nosso cenário do robô de armazém.
+
+## Equipe:
+- Luiz Eduardo Soares Bezerra
+- Luiza Bezerra Bastos
+- Marco Albuquerque Silva Rocha Gomes
