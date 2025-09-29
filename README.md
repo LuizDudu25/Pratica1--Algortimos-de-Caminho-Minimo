@@ -20,7 +20,7 @@
     **Questão 2:**
     ```bash
     cd "Questão_2"
-    python "Questao2.py"
+    python Questao2.py
     ```
 
     **Questão 3:**
